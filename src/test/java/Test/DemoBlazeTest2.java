@@ -21,18 +21,18 @@ import Objects.ProductPage;
 import Objects.SignUpPage;
 import Objects.TestData;
 
+
+
 public class DemoBlazeTest2 {
-    private WebDriver driver;
-    private SignUpPage signUpPage;
-    private HomePage homePage;
-    private LoginPage loginPage;
-    private ProductPage productPage;
-    private CartPage cartPage;
-    private CheckoutPage checkoutPage;
+	    private WebDriver driver;
+	    private SignUpPage signUpPage;
+	    private HomePage homePage;
+	    private LoginPage loginPage;
+	    private ProductPage productPage;
+	    private CartPage cartPage;
+	    private CheckoutPage checkoutPage;
 
-
-
-
+    
     @BeforeClass
     public void setUp() {
     	driver = new ChromeDriver();
@@ -46,7 +46,7 @@ public class DemoBlazeTest2 {
     }
     
         
-        @Test(priority=0, dataProvider = "signupData", dataProviderClass = TestData.class)
+        @Test(priority = 0, dataProvider = "signupData", dataProviderClass = TestData.class)
         public void testSignUp(String username, String password) throws InterruptedException {
             //homePage.navigateToHomePage("https://www.demoblaze.com/");
             driver.findElement(By.id("signin2")).click();
@@ -71,7 +71,7 @@ public class DemoBlazeTest2 {
     }
 
   
-     @Test(priority=1)
+     @Test(priority = 1)
     	public void testLogin() throws InterruptedException {
     		 // Navigate to Login Page
     	 //homePage.navigateToHomePage("https://www.demoblaze.com/");
@@ -97,7 +97,7 @@ public class DemoBlazeTest2 {
      
      
      
-     @Test(priority=2)
+     @Test(priority = 2)
      public void testHomePage() {
     	 String expectedProduct = "Samsung galaxy s6";
     	 Assert.assertEquals(homePage.checkProduct(), expectedProduct);
@@ -108,7 +108,7 @@ public class DemoBlazeTest2 {
      
      
      
-     @Test(priority=3)
+     @Test(priority = 3)
      public void testAddProductToCart() throws InterruptedException {
          Thread.sleep(3000);
          homePage.clickProduct("Samsung galaxy s6");
@@ -125,7 +125,7 @@ public class DemoBlazeTest2 {
 
      }
      
-     @Test(priority=4)
+     @Test(priority = 4)
      public void testCheckout() throws InterruptedException {
        
          // Navigate to Checkout Page

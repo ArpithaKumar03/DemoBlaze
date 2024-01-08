@@ -5,11 +5,8 @@
     <classes>
       <class name="Test.DemoBlazeTest2">
         <methods>
-          <include name="testLogin"/>
           <include name="tearDown"/>
-          <include name="testCheckout"/>
           <include name="setUp"/>
-          <include name="testAddProductToCart"/>
           <include name="testSignUp" invocation-numbers="0"/>
         </methods>
       </class> <!-- Test.DemoBlazeTest2 -->
