@@ -50,6 +50,7 @@ public class DemoBlazeTest2 {
         public void testSignUp(String username, String password) throws InterruptedException {
             //homePage.navigateToHomePage("https://www.demoblaze.com/");
             driver.findElement(By.id("signin2")).click();
+	    Thread.sleep(3000);
 
          // Sign Up Page
             signUpPage.enterUsername(username);
